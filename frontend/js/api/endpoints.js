@@ -9,7 +9,7 @@
  */
 
 // 👇 CAMBIA ESTO con tu URL real de Render cuando la tengas
-const RENDER_BACKEND_URL = 'https://tu-app.onrender.com';
+const RENDER_BACKEND_URL = 'https://eneba-clone-mvp-render.onrender.com';
 
 const getBaseUrl = () => {
     const isLocalhost = window.location.hostname === 'localhost'
