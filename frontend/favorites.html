@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Favoritos ❤️ - Eneba Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">ENEBA CLONE</a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar en favoritos...">
+            <button type="button">Buscar</button>
+        </div>
+        <nav class="nav-links">
+            <a href="store.html">Tienda</a>
+            <a href="#" class="cart-icon">🛒<span class="cart-count">0</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Mis Favoritos ❤️</h1>
+        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">Los juegos que más te gustan,
+            guardados en un solo lugar.</p>
+
+        <div class="products-grid" id="favorites-container">
+            <!-- Los favoritos se inyectarán aquí por JS -->
+            <p style="grid-column: 1/-1; text-align: center; color: var(--text-secondary);">Cargando tu lista de
+                deseos...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eneba Clone MVP. Proyecto Educativo.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

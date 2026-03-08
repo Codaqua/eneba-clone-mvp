@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - Eneba Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/admin.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">ENEBA CLONE</a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar juegos divertidos...">
+            <button type="button">Buscar</button>
+        </div>
+        <nav class="nav-links">
+            <a href="store.html">Tienda</a>
+            <!-- El menú de usuario se inyectará aquí -->
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Panel de Administración</h1>
+
+        <div id="admin-content" class="admin-layout" style="display: none;">
+            <!-- Formulario Gestionar Producto -->
+            <section class="admin-section">
+                <h2 id="form-title">Añadir Nuevo Juego</h2>
+                <form id="prod-form">
+                    <input type="hidden" id="prod-id">
+
+                    <div class="form-group">
+                        <label for="prod-title">Título del Juego</label>
+                        <input type="text" id="prod-title" placeholder="Ej: Elden Ring" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prod-description">Descripción</label>
+                        <textarea id="prod-description" placeholder="Escribe una descripción épica..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Plataformas Disponibles</label>
+                        <div class="platforms-checkboxes"
+                            style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                            <label
+                                style="display: flex; align-items: center; gap: 0.4rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="platform" value="PC"> PC
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 0.4rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="platform" value="PS5"> PS5
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 0.4rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="platform" value="Xbox"> Xbox
+                            </label>
+                            <label
+                                style="display: flex; align-items: center; gap: 0.4rem; font-weight: 400; cursor: pointer;">
+                                <input type="checkbox" name="platform" value="Switch"> Switch
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prod-price">Precio (€)</label>
+                            <input type="number" id="prod-price" step="0.01" required placeholder="p.ej. 59.99">
+                        </div>
+                        <div class="form-group">
+                            <label for="prod-discount">Desc. (%)</label>
+                            <input type="number" id="prod-discount" step="0.1" value="0" placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="prod-stock">Stock</label>
+                            <input type="number" id="prod-stock" value="100" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prod-image">Imagen de Portada (URL)</label>
+                        <input type="url" id="prod-image" required placeholder="https://ejemplo.com/portada.jpg">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prod-gallery">Galería de Imágenes (URLs, una por línea)</label>
+                        <textarea id="prod-gallery" rows="3"
+                            placeholder="https://...1.jpg&#10;https://...2.jpg"></textarea>
+                    </div>
+
+                    <div class="admin-actions">
+                        <button type="submit" id="btn-save" class="btn-primary btn-save">Guardar Producto</button>
+                        <button type="button" id="btn-cancel" class="btn-primary btn-cancel"
+                            style="display: none;">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Lista de Productos -->
+            <section class="admin-section">
+                <h2>Gestión de Catálogo</h2>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Juego</th>
+                                <th>Plataf.</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-products-tbody">
+                            <!-- Productos inyectados por JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eneba Clone MVP. Proyecto Educativo.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

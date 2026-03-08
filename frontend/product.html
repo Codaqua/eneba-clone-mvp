@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - Eneba Clone</title>
+    <!-- Use a modern font like Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/product.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">ENEBA CLONE</a>
+
+        <div class="search-bar">
+            <!-- This search bar handles searches directly from product page -->
+            <input type="text" id="global-search-input" placeholder="Buscar juegos divertidos...">
+            <button type="button" onclick="window.location.href='store.html'">Buscar</button>
+        </div>
+
+        <nav class="nav-links">
+            <a href="store.html">Tienda</a>
+            <a href="#">Login</a>
+            <a href="#" class="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <a href="store.html" style="display:inline-block; margin-bottom: 2rem; color: var(--text-secondary);">← Volver a
+            la tienda</a>
+
+        <div class="product-detail-layout" id="product-detail-container" style="display: none;">
+            <div class="detail-image-container">
+                <div class="carousel-inner" id="carousel-inner">
+                    <!-- Dinámico: Imágenes del carrusel -->
+                </div>
+                <button class="carousel-control prev" id="prev-btn">❮</button>
+                <button class="carousel-control next" id="next-btn">❯</button>
+                <div class="carousel-indicators" id="carousel-indicators"></div>
+            </div>
+
+            <div class="detail-info">
+                <div style="display: flex; justify-content: space-between; align-items: start;">
+                    <h1 id="detail-title">Cargando...</h1>
+                    <button id="btn-detail-fav" class="btn-fav" title="Añadir a favoritos"
+                        style="position: static; width: 44px; height: 44px; font-size: 1.5rem;">🤍</button>
+                </div>
+                <div id="detail-platforms-container"
+                    style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                    <!-- Dinámico: Badges de plataforma -->
+                </div>
+
+                <div class="detail-pricing">
+                    <div id="price-container">
+                        <span id="detail-price-final" class="detail-price-final"></span>
+                        <span id="detail-price-original" class="price-original"
+                            style="margin-left: 10px; font-size: 1.2rem;"></span>
+                    </div>
+
+                    <button id="btn-detail-add-cart" class="btn-primary btn-add-cart"
+                        style="margin-top: 1.5rem; width: 100%;">Añadir al carrito</button>
+                </div>
+
+                <div class="detail-description">
+                    <h3>Descripción</h3>
+                    <p id="detail-description-text"></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="product-loading" style="text-align: center; padding: 5rem 0;">
+            <p>Cargando detalles del juego...</p>
+        </div>
+
+        <div id="product-error" style="display: none; text-align: center; padding: 5rem 0; color: #ef4444;">
+            <h2>¡Opps! No pudimos encontrar este juego.</h2>
+            <a href="store.html" class="btn-primary" style="margin-top: 1rem;">Volver a la tienda</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eneba Clone MVP. Proyecto Educativo.</p>
+    </footer>
+
+    <!-- Cargamos el punto de entrada JS como módulo ES6 -->
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

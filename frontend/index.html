@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eneba Clone - Ofertas Épicas en Juegos</title>
+    <!-- Use a modern font like Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">ENEBA CLONE</a>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar juegos divertidos...">
+            <button type="button">Buscar</button>
+        </div>
+
+        <nav class="nav-links">
+            <a href="store.html">Tienda</a>
+            <a href="#">Login</a>
+            <a href="#" class="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Descubre tu próxima aventura</h1>
+            <p>Miles de juegos para PC, PlayStation, Xbox y Nintendo a precios increíbles.</p>
+            <a href="store.html" class="btn-primary">Explorar Tienda →</a>
+        </section>
+
+        <section class="categories">
+            <h2 class="page-title">Categorías Populares</h2>
+            <div class="categories-grid">
+                <article class="category-card" onclick="window.location.href='store.html?platform=PC'">
+                    <h3>🎮 PC Games</h3>
+                </article>
+                <article class="category-card" onclick="window.location.href='store.html?platform=PS5'">
+                    <h3>🔵 PlayStation</h3>
+                </article>
+                <article class="category-card" onclick="window.location.href='store.html?platform=Xbox'">
+                    <h3>🟢 Xbox</h3>
+                </article>
+                <article class="category-card" onclick="window.location.href='store.html?platform=Switch'">
+                    <h3>🔴 Nintendo</h3>
+                </article>
+            </div>
+        </section>
+
+        <!-- Dynamic content grid placeholder -->
+        <h2 class="page-title">Ofertas Destacadas</h2>
+        <div class="products-grid" id="featured-products">
+            <!-- MOCK DATA FOR LAYOUT -->
+            <article class="product-card">
+                <span class="discount-badge">-20%</span>
+                <span class="platform-badge">PC</span>
+                <img src="https://placehold.co/400x500/1a1a1a/ffffff?text=Game+Cover" alt="Game Name"
+                    class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Juego de Ejemplo (Mockup)</h3>
+                    <div class="product-price-container">
+                        <span class="price-original">59.99€</span>
+                        <span class="price-final">47.99€</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <span class="platform-badge">PS5</span>
+                <img src="https://placehold.co/400x500/1a1a1a/ffffff?text=Game+Cover" alt="Game Name"
+                    class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Otro Juego (Mockup)</h3>
+                    <div class="product-price-container">
+                        <span class="price-final">69.99€</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eneba Clone MVP. Proyecto Educativo.</p>
+    </footer>
+
+    <!-- Cargamos el punto de entrada JS como módulo ES6 -->
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

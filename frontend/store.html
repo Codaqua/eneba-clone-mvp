@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Eneba Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/store.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">ENEBA CLONE</a>
+
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar juegos divertidos...">
+            <button type="button" id="search-btn">Buscar</button>
+        </div>
+
+        <nav class="nav-links">
+            <a href="store.html" style="color: var(--accent);">Tienda</a>
+            <a href="#">Login</a>
+            <a href="#" class="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Catálogo de Juegos</h1>
+
+        <div class="store-layout">
+            <!-- Sidebar / Filters -->
+            <aside class="sidebar">
+                <form id="filter-form">
+                    <div class="filter-group">
+                        <h4>Plataforma</h4>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="radio" name="platform" value="" checked>
+                                Todas
+                            </label>
+                            <!-- IMPORTANT: Exact values matches models.PlatformEnum -->
+                            <label class="checkbox-label">
+                                <input type="radio" name="platform" value="PC">
+                                PC
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" name="platform" value="PS5">
+                                PS5
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" name="platform" value="Xbox">
+                                Xbox
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" name="platform" value="Switch">
+                                Switch
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Precio (€)</h4>
+                        <div class="price-inputs">
+                            <input type="number" id="price-min" name="price_min" placeholder="Min" min="0">
+                            <span>-</span>
+                            <input type="number" id="price-max" name="price_max" placeholder="Max" min="0">
+                        </div>
+                    </div>
+
+                    <button type="button" id="apply-filters" class="btn-filter">Aplicar Filtros</button>
+                </form>
+            </aside>
+
+            <!-- Products Grid -->
+            <section>
+                <div class="products-grid" id="products-container">
+                    <!-- Javascript will inject products here. Adding some mocks for layout design testing -->
+                    <article class="product-card" onclick="window.location.href='product.html?id=1'">
+                        <span class="discount-badge">-15%</span>
+                        <span class="platform-badge">Xbox</span>
+                        <img src="https://placehold.co/400x500/1a1a1a/ffffff?text=Game+Placeholder" alt="Game Name"
+                            class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Juego Sorprendente</h3>
+                            <div class="product-price-container">
+                                <span class="price-original">39.99€</span>
+                                <span class="price-final">33.99€</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" onclick="window.location.href='product.html?id=2'">
+                        <span class="platform-badge">PC</span>
+                        <img src="https://placehold.co/400x500/1a1a1a/ffffff?text=Another+Game" alt="Game Name"
+                            class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Otro Juego Normal</h3>
+                            <div class="product-price-container">
+                                <span class="price-final">29.99€</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eneba Clone MVP. Proyecto Educativo.</p>
+    </footer>
+
+    <!-- Cargamos el punto de entrada JS como módulo ES6 -->
+    <!-- Botón Ir Arriba -->
+    <button id="back-to-top" class="btn-back-to-top" title="Volver arriba">↑</button>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

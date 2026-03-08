@@ -1,0 +1,35 @@
+/* Home Page Hero */
+.hero {
+    background: linear-gradient(rgba(20, 23, 26, 0.4), rgba(20, 23, 26, 0.6)), url("https://imgproxy.eneba.games/kVzHHDhHciWJBO0J7FLkP8FTDZrsfpCxrKBYCdf_k8Q/c:1500:400:nowe:150:0/czM6Ly9zbGlkZXIu/ZW5lYmEuZ2FtZXMv/SjNWcFdnNWpPbEli/ZXdpa3UxNmhicnRr/cjcyQWp1TmN6a0Zq/SGZiN3hJby5qcGc") center/cover;
+    border-radius: var(--border-radius);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    border: 1px solid var(--border-color);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+/* Home Categories Grid */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Home Products Section */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
