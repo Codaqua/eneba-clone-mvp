@@ -8,6 +8,7 @@ env/
 __pycache__/
 *.py[cod]
 *.pyo
+*.pyc
 
 # Environment variables (NEVER commit this!)
 backend/.env
